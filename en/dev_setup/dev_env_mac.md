@@ -36,6 +36,8 @@ Create the `~/.zshenv` file or append it (by running `open ~/.zshenv` on the ter
 ulimit -S -n 2048
 ```
 
+If you are using bash, the equivalent file is `~/.bashrc` and you add the same line
+
 ## Enforce Python Version
 
 If not already existing, create the file `~/.zshrc` and add these lines:
@@ -61,6 +63,9 @@ python3 -m pip install --user pyserial empy toml numpy pandas jinja2 pyyaml pyro
 # if this fails with a permissions error, your Python install is in a system path - use this command instead:
 sudo -H python3 -m pip install --user pyserial empy toml numpy pandas jinja2 pyyaml pyros-genmsg packaging
 ```
+
+Note that PX4 calls the system python directly so
+you cannot use Anaconda, Pipenv or other virtual environment manager to manage Python dependencies
 
 ## Gazebo Simulation
 
