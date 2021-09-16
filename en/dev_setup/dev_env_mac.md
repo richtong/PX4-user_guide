@@ -82,7 +82,9 @@ To install SITL simulation with Gazebo:
 brew install --cask xquartz
 brew install px4-sim-gazebo
 ```
-
+Note that if you do a `brew upgrade` or try to reinstall px4-sim-gazebo, it will have a conflict with
+with the package cppzmq. The solution is to first `brew uninstall cppzmq` before you do a
+px4-sim-gazebo installation.
 
 ## jMAVSim Simulation
 
